@@ -4,7 +4,7 @@ import { Tally } from "./Tally.js";
 import { ILogJSON } from "./@types/LogFileTypes";
 
 const processLogFiles = async () => {
-  const directoryPath = path.join(".", path.sep, "logs");
+  const directoryPath = path.join(".", "logs");
 
   try {
     const tally = new Tally();
@@ -13,7 +13,7 @@ const processLogFiles = async () => {
 
     for (let i = 0; i < fileNameArray.length; i++) {
       const fileName = fileNameArray[i];
-      const filePath = path.join(directoryPath, path.sep, fileName);
+      const filePath = path.join(directoryPath, fileName);
 
       const jsonMessage = await readFile(filePath, "utf-8");
 

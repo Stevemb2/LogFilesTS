@@ -11,9 +11,9 @@ export interface IFrequency {
   [email: string]: number;
 }
 
-interface ITallyEntry {
+export interface ITallyEntry {
   email: string;
   total: number;
 }
 
-interface ITally extends Array<ITallyEntry> {}
+export interface ITally extends Array<ITallyEntry> {}
